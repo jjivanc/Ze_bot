@@ -3,7 +3,7 @@ from discord.ext import commands
 import os
 
 client = commands.Bot(command_prefix=".")
-token = os.getenv("NzgwNzY4ODQ1ODQxMTcwNDMz.X7z5pg.G_QhbQzhuuwmfopzuuBq3OL68r0")
+token = os.getenv("DISCORD_BOT_TOKEN")
 
 @client.event
 async def on_ready() :
@@ -34,4 +34,4 @@ async def imagen(ctx,*,text):
 	await message.delete()
 	await ctx.send(f"https://t.nhentai.net/galleries/{text}/cover.jpg")
 
-client.run('NzgwNzY4ODQ1ODQxMTcwNDMz.X7z5pg.G_QhbQzhuuwmfopzuuBq3OL68r0')
+client.run(token)
