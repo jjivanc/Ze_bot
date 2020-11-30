@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import os
-import ver
+import vercapa
 
 client = commands.Bot(command_prefix=".")
 token = os.getenv("DISCORD_BOT_TOKEN")
@@ -36,7 +36,7 @@ async def imagen(ctx,*,text):
 	await ctx.send(f"https://t.nhentai.net/galleries/{text}/cover.jpg")
 
 @client.command(name="ver")
-async def imagen(ctx,*,text):
+async def ver(ctx,*,text):
 	message = ctx.message
 	await message.delete()
 	await ctx.send(f"test {image}")	
